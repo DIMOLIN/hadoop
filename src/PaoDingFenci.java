@@ -19,7 +19,7 @@ public class PaoDingFenci {
     public String fenci01(String text) throws IOException {
         StringBuffer sb = new StringBuffer();
         StringReader reader = new StringReader(text);
-        TokenStream ts = this.analyzer.tokenStream(text, reader);
+        TokenStream ts = this.analyzer.tokenStream("", reader);
 
         TermAttribute termAtt = (TermAttribute) ts
                 .addAttribute(TermAttribute.class);
